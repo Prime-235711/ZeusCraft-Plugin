@@ -1,5 +1,9 @@
-name: DropMultiplierChallenge
+name: ZeusCraft
 version: 1.0
 author: Henry
 main: me.prime.ZeusServer.Main
-description: Drop Multiplier Challenge
+description: Adds bank and stuff
+
+commands:
+  smite:
+    description: ChatColor.GOLD + /smite <Player> ChatColor.GREEN + Smites a player by striking them with lighting.
