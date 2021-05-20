@@ -8,6 +8,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import me.prime.ZeusServer.Main;
 import net.md_5.bungee.api.ChatColor;
@@ -38,7 +40,8 @@ public class Smite implements CommandExecutor{
 				//This check to see if the player it just found is null meaning it did not fine it correctly
 				if(target == null) {
 					//This is send if they did not input a accurate player name
-					player.sendMessage(ChatColor.RED + "Input valid player name.");
+					player.sendMessage(ChatColor.BLUE + "NOOOOooOOOOooO!!!!");
+					player.sendMessage(ChatColor.RED + "THATS NOT CORRECT");
 					return false;
 				}
 				
@@ -47,13 +50,13 @@ public class Smite implements CommandExecutor{
 				World targetWorld = target.getWorld();
 
 				//This strikes lighting in targetWorld at the location targetLocation 10 times
-				for(int i = 0; i < 10; i ++) {
+				for(int i = 0; i < 9; i ++) {
 					targetWorld.strikeLightning(targetLocation);
 				}
 				
 				//This kills the target
 				target.setHealth(0.0);
-				
+				target.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 10) );
 			} else {
 				//This is send if they do not give any input for name
 				player.sendMessage(ChatColor.RED + "Input valid player name.");
