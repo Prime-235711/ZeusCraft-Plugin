@@ -6,4 +6,4 @@ description: Adds bank and stuff
 
 commands:
   smite:
-    description: ChatColor.GOLD + /smite <Player> ChatColor.GREEN + Smites a player by striking them with lighting.
+    description: /smite <Player> Smites a player by striking them with lighting.
